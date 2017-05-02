@@ -10,10 +10,11 @@ public class Main {
         Path file = Paths.get(args[0]);
         BufferedReader buffer = Files.newBufferedReader(file);
         String line;
+        int sum = 0;
         
         while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            System.out.println(line);
+            sum += Integer.parseInt(line.trim());
         }
+        System.out.println(sum);
     }
 }
